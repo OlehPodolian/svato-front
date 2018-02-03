@@ -1,20 +1,32 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <mat-icon class="example-icon">menu</mat-icon>
+    <span><a link="#">СВАТО</a></span>
+    <span class="example-spacer"></span>
+    <button mat-button (click)="openSnackBar()">СЛАВА УКРАЇНІ</button>
+    <mat-icon class="example-icon">fingerprint</mat-icon>
+    <mat-icon class="example-icon">layers</mat-icon>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-card class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>Таряник Олексій</mat-card-title>
+    <mat-card-subtitle>Голова Шевченківського осередку</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="http://svato.kh.ua/wp-content/uploads/2017/01/8483176.jpg" alt="Photo of a Shiba Inu">
+  <mat-card-content>
+    <p>
+      Харківська областна громадська організація “Спілка ветеранів АТО” була заснована у квітні 2015 року у м. Харкові, після того як звичайні бійці, учасники АТО нарешті почали усвідомлювати реальне положення справ у  країні: те що неоголошена війна швидко не скінчиться й про них особово ніхто не збирається піклуватися. Дійсність така: державі потрібні нові мобілізовані, а між тим додому почали повертатися перші дембеля зі своїми проблемами.
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button color="accent">ПОДОБАЄТЬСЯ</button>
+    <button mat-raised-button color="accent">ПІДТРИМУЮ</button>
+    <button mat-raised-button color="accent">МОЛОДДЦІ</button>
+    <button mat-raised-button color="accent">ТАК ТРИМАТИ</button>
+    <button mat-raised-button color="accent">ПІШЛИ В ДУПУ, МОСКАЛІ!</button>
+  </mat-card-actions>
+</mat-card>
 
