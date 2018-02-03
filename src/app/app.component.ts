@@ -11,6 +11,10 @@ export class AppComponent implements OnDestroy {
   title = 'app';
   mobileQuery: MediaQueryList;
 
+  isAuthenticated = false;
+
+  showBottomRow = false;
+
   shouldRun = true;
 
   fillerNav = Array(50).fill(0).map((_, i) => `Nav Item ${i + 1}`);
@@ -32,5 +36,17 @@ export class AppComponent implements OnDestroy {
 
   ngOnDestroy(): void {
     this.mobileQuery.removeListener(this._mobileQueryListener);
+  }
+
+  onShowBottomRow() {
+    this.showBottomRow = !this.showBottomRow;
+  }
+
+  login() {
+    this.isAuthenticated = true;
+  }
+
+  logout() {
+    this.isAuthenticated = false;
   }
 }

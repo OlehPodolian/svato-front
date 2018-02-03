@@ -70,10 +70,19 @@
     <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
     <h1 class="example-app-name">СВАТО</h1>
     <span class="example-spacer"></span>
-    <mat-icon class="example-icon">fingerprint</mat-icon>
-    <mat-icon class="example-icon">layers</mat-icon>
+    <ng-template [ngIf]="!isAuthenticated">
+      <button mat-icon-button (click)="login()"><mat-icon>fingerprint</mat-icon></button>
+    </ng-template>
+    <div *ngIf="isAuthenticated">
+      <button mat-icon-button (click)="logout()"><mat-icon>exit_to_app</mat-icon></button>
+    </div>
+    <button mat-icon-button (click)="onShowBottomRow()"><mat-icon>layers</mat-icon></button>
   </mat-toolbar>
-
+  <mat-toolbar-row *ngIf="showBottomRow">
+    <span class="example-spacer"></span>
+    <button mat-icon-button (click)="onShowBottomRow()"><mat-icon>layers</mat-icon></button>
+    <button mat-icon-button (click)="onShowBottomRow()"><mat-icon>layers</mat-icon></button>
+  </mat-toolbar-row>
   <mat-sidenav-container class="example-sidenav-container"
                          [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
     <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
@@ -84,7 +93,23 @@
     </mat-sidenav>
 
     <mat-sidenav-content>
-      <p *ngFor="let content of fillerContent">{{content}}</p>
+      <mat-card class="example-card">
+      <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>Таряник Олексій</mat-card-title>
+      <mat-card-subtitle>Голова Шевченківського осередку</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image src="http://svato.kh.ua/wp-content/uploads/2017/01/8483176.jpg" alt="Photo of a Shiba Inu">
+      <mat-card-content>
+      <p>
+      Харківська областна громадська організація “Спілка ветеранів АТО” була заснована у квітні 2015 року у м. Харкові, після того як звичайні бійці, учасники АТО нарешті почали усвідомлювати реальне положення справ у  країні: те що неоголошена війна швидко не скінчиться й про них особово ніхто не збирається піклуватися. Дійсність така: державі потрібні нові мобілізовані, а між тим додому почали повертатися перші дембеля зі своїми проблемами.
+      </p>
+      </mat-card-content>
+      <mat-card-actions>
+      <button mat-raised-button color="accent">ПОДОБАЄТЬСЯ</button>
+      <button mat-raised-button color="accent">ПІДТРИМУЮ</button>
+      </mat-card-actions>
+      </mat-card>
     </mat-sidenav-content>
   </mat-sidenav-container>
 </div>
