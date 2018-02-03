@@ -5,7 +5,9 @@ import {
   MatCardModule,
   MatIconModule,
   MatToolbarModule,
-  MatSnackBarModule
+  MatSnackBarModule,
+  MatSidenavModule,
+  MatListModule
 
 } from '@angular/material';
 
@@ -17,7 +19,9 @@ import {
     MatToolbarModule,
     MatIconModule,
     MatCardModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatSidenavModule,
+    MatListModule
   ],
   exports: [
     BrowserAnimationsModule,
@@ -25,7 +29,9 @@ import {
     MatToolbarModule,
     MatIconModule,
     MatCardModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatSidenavModule,
+    MatListModule
   ]
 })
 
