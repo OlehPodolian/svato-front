@@ -9,7 +9,7 @@ import {MediaMatcher} from '@angular/cdk/layout';
 })
 export class AppComponent implements OnDestroy {
   title = 'app';
-  mobileQuery: MediaQueryList;
+  isViewPortMobile: MediaQueryList;
 
   isAuthenticated = false;
 
@@ -29,13 +29,13 @@ export class AppComponent implements OnDestroy {
   private _mobileQueryListener: () => void;
 
   constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher) {
-    this.mobileQuery = media.matchMedia('(max-width: 600px)');
+    this.isViewPortMobile = media.matchMedia('(max-width: 700px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
-    this.mobileQuery.addListener(this._mobileQueryListener);
+    this.isViewPortMobile.addListener(this._mobileQueryListener);
   }
 
   ngOnDestroy(): void {
-    this.mobileQuery.removeListener(this._mobileQueryListener);
+    this.isViewPortMobile.removeListener(this._mobileQueryListener);
   }
 
   onShowBottomRow() {
