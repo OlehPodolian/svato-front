@@ -84,7 +84,7 @@
     <button mat-icon-button (click)="onShowBottomRow()"><mat-icon>layers</mat-icon></button>
   </mat-toolbar-row>
   <mat-sidenav-container class="example-sidenav-container"
-                         [style.marginTop.px]="isViewPortMobile.matches ? 56 : 0">
+                         [style.marginTop.px]="isViewPortMobile.matches ? showBottomRow ? 112 : 56 : 0">
     <mat-sidenav #snav [mode]="isViewPortMobile.matches ? 'over' : 'side'"
                  [fixedInViewport]="isViewPortMobile.matches" [fixedTopGap]="showBottomRow ? 112 : 56">
       <mat-nav-list>
